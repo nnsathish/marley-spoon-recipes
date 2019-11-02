@@ -32,3 +32,8 @@ Launch the browser and hit [http://localhost:3000](http://localhost:3000)
 ```bash
 $ rake
 ```
+
+## TODOs
+ - Support for pagination, if recipes are more than 100
+ - Cache data retrived in listing and reuse it for detail view
+ - Add test cases
