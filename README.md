@@ -1,24 +1,34 @@
-# README
+# Marley Spoon Recipes
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple Rails web application that uses Contentful API to list information
+about recipes
 
-Things you may want to cover:
+### System dependencies
+* Ruby - 2.6.3
+* Bundler - 2.0.1
 
-* Ruby version
+### Configuration
+```bash
+$ git clone https://github.com/nnsathish/marley-spoon-recipes.git
+$ cd marley-spoon-recipes
+```
+Install rails and dependencies
+```bash
+$ bundle
+```
+Setup the master key for rails credentails
+```bash
+$ echo "818da225522489a714c2c2a684692cfa" >> config/master.key
+```
 
-* System dependencies
+Start the server
+```bash
+$ rails s
+```
 
-* Configuration
+Launch the browser and hit [http://localhost:3000](http://localhost:3000)
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Run Test cases
+```bash
+$ rake
+```
