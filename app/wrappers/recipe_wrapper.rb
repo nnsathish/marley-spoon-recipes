@@ -1,6 +1,6 @@
 class RecipeWrapper < Contentful::Entry
-  def image_url
-    self.photo.url
+  def image_url(opts = {})
+    self.photo.url(opts)
   end
 
   def chef_name

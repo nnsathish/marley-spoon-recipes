@@ -3,8 +3,8 @@
 <div class='recipes-list'>
   <% @recipes.each do |recipe| %>
     <a class='recipe-tile' href="<%= recipe_path(recipe.id) %>">
-      <img src="<%= recipe.image_url %>">
-      <caption><%= recipe.title %></caption>
+      <img src="<%= recipe.image_url(width: 500) %>" />
+      <legend><%= recipe.title %></legend>
     </a>
   <% end %>
 </div>

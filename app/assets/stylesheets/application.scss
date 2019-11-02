@@ -29,9 +29,13 @@ section {
 }
 
 .recipe-tile {
+  float: left;
+  margin-right: 20px;
   img {
-    width: 100px;
     display: block;
     margin-top: 10px;
+  }
+  legend {
+    width: 480px;
   }
 }
