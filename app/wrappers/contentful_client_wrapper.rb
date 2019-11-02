@@ -11,7 +11,7 @@ class ContentfulClientWrapper
     self.client.entries(content_type: 'recipe', include: include_level)
   end
 
-  def recipe(id)
+  def recipe(id, include_level = 1)
     self.client.entry(id)
   end
 

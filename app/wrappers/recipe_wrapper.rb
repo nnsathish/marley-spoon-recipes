@@ -5,6 +5,8 @@ class RecipeWrapper < Contentful::Entry
 
   def chef_name
     self.chef.name
+  rescue Contentful::EmptyFieldError
+    nil
   end
 
   def tag_names

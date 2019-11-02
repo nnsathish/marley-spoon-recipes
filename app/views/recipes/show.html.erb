@@ -1,0 +1,9 @@
+<h3><%= @recipe.title %></h3>
+<% if @recipe.chef_name %>
+  <label>By "<%= @recipe.chef_name %>"</label>
+<% end %>
+<img src="<%= @recipe.image_url %>" />
+<p><%= @recipe.description %></p>
+<% if @recipe.tag_names.any? %>
+  <em>Tags: <%= @recipe.tag_names.join(', ') %></em>
+<% end %>

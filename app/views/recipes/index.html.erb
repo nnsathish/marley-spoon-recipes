@@ -2,9 +2,9 @@
 
 <div class='recipes-list'>
   <% @recipes.each do |recipe| %>
-    <div class='recipe-tile'>
+    <a class='recipe-tile' href="<%= recipe_path(recipe.id) %>">
       <img src="<%= recipe.image_url %>">
       <caption><%= recipe.title %></caption>
-    </div>
+    </a>
   <% end %>
 </div>

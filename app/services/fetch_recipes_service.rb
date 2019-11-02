@@ -7,7 +7,7 @@ class FetchRecipesService < BaseService
   end
 
   def call
-    recipes = wrapper.recipes
+    recipes = fetch_recipes
     set_data!(recipes)
   rescue StandardError => ex
     log_exception(ex)
@@ -16,6 +16,15 @@ class FetchRecipesService < BaseService
   end
 
   private
+
+  def fetch_recipes
+    recipe_id = options[:id].presence
+    recipes = if recipe_id
+      wrapper.recipe(recipe_id)
+    else
+      wrapper.recipes
+    end
+  end
 
   def wrapper
     @wrapper ||= ContentfulClientWrapper.new(options)
